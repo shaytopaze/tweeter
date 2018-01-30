@@ -20,3 +20,10 @@ main span {
   float: right;
 }
 
+#tweet-data {
+  margin-top: 10px;
+  border: 1px solid darkgrey;
+  border-radius: 10px;
+  padding: 10px;
+}
+
