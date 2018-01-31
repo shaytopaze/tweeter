@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-$(".new-tweet textarea").on("keypress", function() {
+$(".new-tweet textarea").on("keydown", function() {
   let input = $(this).val();
   let count = input.length
 
