@@ -56,24 +56,24 @@ $(document).ready(function() {
   ];
 
   function renderTweets(tweets) {
-     tweets.forEach(function(tweet) {
-     $('.container').append(createTweetElement(tweet));
-   });
-   };
+    tweets.forEach(function(tweet) {
+      $('.container').append(createTweetElement(tweet));
+    });
+  };
 
   function createTweetElement(tweet) {
-    let $tweet = $('<article>').addClass('tweet-data');
-    let $header = $('<header>');
-    let $avatars = $('<img>').addClass('user-photo').attr("src", tweet.user.avatars.small);
-    let $userName = $('<h3>').text(tweet.user.name);
-    let $handle = $('<p>').text(tweet.user.handle);
-    let $text = $('<p>').addClass('tweet').text(tweet.content.text);
-    let $footer = $('<footer>');
-    let $icons = $('<div>').addClass('icons');
-    let $fontAwesome1 = $('<i>').addClass('fa fa-flag');
-    let $fontAwesome2 = $('<i>').addClass('fa fa-retweet');
-    let $fontAwesome3 = $('<i>').addClass('fa fa-heart');
-    let $created_at = $('<p>').text(tweet.created_at);
+    const $tweet = $('<article>').addClass('tweet-data');
+    const $header = $('<header>');
+    const $avatars = $('<img>').addClass('user-photo').attr("src", tweet.user.avatars.small);
+    const $userName = $('<h3>').text(tweet.user.name);
+    const $handle = $('<p>').text(tweet.user.handle);
+    const $text = $('<p>').addClass('tweet').text(tweet.content.text);
+    const $footer = $('<footer>');
+    const $icons = $('<div>').addClass('icons');
+    const $fontAwesome1 = $('<i>').addClass('fa fa-flag');
+    const $fontAwesome2 = $('<i>').addClass('fa fa-retweet');
+    const $fontAwesome3 = $('<i>').addClass('fa fa-heart');
+    const $created_at = $('<p>').text(tweet.created_at);
     $($icons).append($fontAwesome1, $fontAwesome2, $fontAwesome3);
     $($footer).append($created_at, $icons);
     $($header).append($avatars, $userName, $handle);
