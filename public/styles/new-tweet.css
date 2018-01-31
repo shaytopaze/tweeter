@@ -20,10 +20,83 @@ main span {
   float: right;
 }
 
-#tweet-data {
+.tweet-data {
   margin-top: 10px;
   border: 1px solid darkgrey;
   border-radius: 10px;
-  padding: 10px;
+  opacity: 0.5;
 }
+
+.tweet-data header {
+  background-color: lightgrey;
+  background-size: 10px;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+  line-height: 50px;
+}
+
+.tweet-data header h3 {
+  margin-top: 0;
+  padding: 5px;
+  display: inline;
+}
+
+.tweet-data footer {
+  margin-top: 30px;
+  border-top: 1px solid lightgrey;
+  padding: 10px;
+/*  display: inline;*/
+}
+
+.tweet-data footer p {
+  display: inline;
+}
+
+.tweet-data p.tweet {
+  margin: 10px;
+  padding: 25px 5px 5px;
+  clear: both;
+}
+
+.tweet-data header p {
+  color: grey;
+  font-size: x-small;
+  padding: 5px;
+  float: right;
+  margin: 0;
+}
+
+.tweet-data:hover {
+  margin-top: 10px;
+  border: 1px solid darkgrey;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.icons {
+  float: right;
+  display: inline;
+  visibility: hidden;
+}
+
+
+.tweet-data:hover .icons {
+  float: right;
+  display: inline;
+  color: green;
+  visibility: visible;
+}
+
+.user-photo {
+  height: 50px;
+  width: 60px;
+  float: left;
+  border-radius: 10px;
+}
+
+
+
+
+
+
 
