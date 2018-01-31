@@ -70,11 +70,11 @@ $(document).ready(function() {
     const $text = $('<p>').addClass('tweet').text(tweet.content.text);
     const $footer = $('<footer>');
     const $icons = $('<div>').addClass('icons');
-    const $fontAwesome1 = $('<i>').addClass('fa fa-flag');
-    const $fontAwesome2 = $('<i>').addClass('fa fa-retweet');
-    const $fontAwesome3 = $('<i>').addClass('fa fa-heart');
+    const $flagIcon = $('<i>').addClass('fa fa-flag');
+    const $retweetIcon = $('<i>').addClass('fa fa-retweet');
+    const $heartIcon = $('<i>').addClass('fa fa-heart');
     const $created_at = $('<p>').text(tweet.created_at);
-    $($icons).append($fontAwesome1, $fontAwesome2, $fontAwesome3);
+    $($icons).append($flagIcon, $retweetIcon, $heartIcon);
     $($footer).append($created_at, $icons);
     $($header).append($avatars, $userName, $handle);
     $($tweet).append($header, $text, $footer);

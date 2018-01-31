@@ -93,6 +93,10 @@ main span {
   border-radius: 10px;
 }
 
+.over-character-limit {
+  color: red;
+}
+
 
 
 
