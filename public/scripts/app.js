@@ -8,8 +8,10 @@
 $(document).ready(function() {
 
   function renderTweets(tweets) {
+    // clear data so tweets do not repeat
+      $(".tweet-database").empty();
     tweets.forEach(function(tweet) {
-      $('.container').find(".new-tweet").after(createTweetElement(tweet));
+      $('.tweet-database').prepend(createTweetElement(tweet));
     });
   };
 
@@ -37,7 +39,6 @@ $(document).ready(function() {
 
   function loadTweets() {
     $.get('/tweets').done(function (tweets) {
-      // $(".tweet-data").clear() //clear data?!
       return renderTweets(tweets);
     });
   }
@@ -47,11 +48,13 @@ $(document).ready(function() {
   $("form").on( "submit", function(event) {
     event.preventDefault();
 
+    // If textarea is left empty - alert user and do not submit
     if ($("textarea").val().length === 0) {
       alert('No input present');
       return;
     }
 
+    // If textarea has character count over 140 - alert user and do not submit
     if ($("textarea").val().length > 140) {
       alert('Too many characters');
       return;
@@ -62,11 +65,12 @@ $(document).ready(function() {
       loadTweets();
     });
 
-    // Clear text input
+    // Clear text input once you submit tweet
     $("textarea").val("");
     $('.counter').text('140');
   });
 
+  // Compose button toggles compose form up and down - sets curser in textarea
   $("#nav-bar button").click(function() {
     $(".new-tweet").slideToggle( "slow", function() {
       $("textarea").focus()
