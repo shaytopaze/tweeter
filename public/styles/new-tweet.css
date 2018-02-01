@@ -55,11 +55,12 @@ main span {
   margin: 10px;
   padding: 25px 5px 5px;
   clear: both;
+  overflow-wrap: break-word;
 }
 
 .tweet-data header p {
   color: grey;
-  font-size: x-small;
+  font-size: small;
   padding: 5px;
   float: right;
   margin: 0;
@@ -95,6 +96,10 @@ main span {
 
 .over-character-limit {
   color: red;
+}
+
+.fa {
+  padding: 2px;
 }
 
 
