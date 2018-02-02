@@ -15,3 +15,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Close up of form and tweets"](https://github.com/shaytopaze/tweeter/blob/master/docs/close-up.png?raw=true)
+!["Full view of tweeter app"](https://github.com/shaytopaze/tweeter/blob/master/docs/full-screen.png?raw=true)
+!["No input present pop-up"](https://github.com/shaytopaze/tweeter/blob/master/docs/no-input-present.png?raw=true)
+!["Too many character pop-up"](https://github.com/shaytopaze/tweeter/blob/master/docs/too-many-characters.png?raw=true)
+
