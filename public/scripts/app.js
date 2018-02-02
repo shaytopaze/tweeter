@@ -42,6 +42,7 @@ $(document).ready(function() {
     });
   }
 
+  // Conditionals on submit button
   $("form").on( "submit", function(event) {
     event.preventDefault();
 
