@@ -4,17 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 $(document).ready(function() {
-
-  function renderTweets(tweets) {
-    // clear data so tweets do not repeat
-      $(".tweet-database").empty();
-    tweets.forEach(function(tweet) {
-      $('.tweet-database').prepend(createTweetElement(tweet));
-    });
-  };
-
 
   function createTweetElement(tweet) {
     const $tweet = $('<article>').addClass('tweet-data');
@@ -28,7 +18,8 @@ $(document).ready(function() {
     const $flagIcon = $('<i>').addClass('fa fa-flag');
     const $retweetIcon = $('<i>').addClass('fa fa-retweet');
     const $heartIcon = $('<i>').addClass('fa fa-heart');
-    const $created_at = $('<p>').text(moment(tweet.created_at).fromNow()); //momentJS
+    // use momentJS to display when tweet was posted last
+    const $created_at = $('<p>').text(moment(tweet.created_at).fromNow());
 
     $($icons).append($flagIcon, $retweetIcon, $heartIcon);
     $($footer).append($created_at, $icons);
@@ -37,13 +28,19 @@ $(document).ready(function() {
     return $tweet;
   }
 
+  function renderTweets(tweets) {
+    // clear data so tweets do not repeat
+    $(".tweet-database").empty();
+    tweets.forEach(function(tweet) {
+      $('.tweet-database').prepend(createTweetElement(tweet));
+    });
+  }
+
   function loadTweets() {
     $.get('/tweets').done(function (tweets) {
       return renderTweets(tweets);
     });
   }
-
-  loadTweets();
 
   $("form").on( "submit", function(event) {
     event.preventDefault();
@@ -60,7 +57,7 @@ $(document).ready(function() {
       return;
     }
 
-    var str = $ ("form").serialize();
+    var str = $("form").serialize();
     $.post('/tweets', str).done(function() {
       loadTweets();
     });
@@ -73,11 +70,16 @@ $(document).ready(function() {
   // Compose button toggles compose form up and down - sets curser in textarea
   $("#nav-bar button").click(function() {
     $(".new-tweet").slideToggle( "slow", function() {
-      $("textarea").focus()
+      $("textarea").focus();
     });
   });
 
+  loadTweets();
+
 });
+
+
+
 
 
 

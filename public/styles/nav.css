@@ -26,7 +26,7 @@
 #nav-bar button {
   float: right;
   padding: 15px;
-  margin: 15px 40px;
+  margin: 15px 15px;
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
@@ -35,9 +35,10 @@
 }
 
 #nav-bar button:hover {
+  position:;
   float: right;
   padding: 15px;
-  margin: 15px 40px;
+  margin: 15px 15px;
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;

@@ -14,6 +14,7 @@ main textarea {
   width: 100%;
   padding: 5px;
   margin-top: 20px;
+  max-width: 100%
 }
 
 main span {
@@ -89,7 +90,7 @@ main span {
 
 .user-photo {
   height: 50px;
-  width: 60px;
+  width: 50px;
   float: left;
   border-radius: 10px;
 }
@@ -100,6 +101,10 @@ main span {
 
 .fa {
   padding: 2px;
+}
+
+form input:hover {
+  border: 1px solid;
 }
 
 
