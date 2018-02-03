@@ -2,7 +2,7 @@
 
 const MongoClient = require("mongodb").MongoClient;
 // const {MongoClient} = require("mongodb");  <--- destructuring assignment
-const MONGODB_URI = "mongodb://localhost:27017/tweeter";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 MongoClient.connect(MONGODB_URI, (err, db) => {
   if (err) {
